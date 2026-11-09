@@ -1,0 +1,1239 @@
+{
+  "project": "LanM Phase 1",
+  "start_date": "2026-11-09",
+  "end_date": "2026-12-14",
+  "last_schedulable_date": "2026-12-13",
+  "thanksgiving_start": "2026-11-25",
+  "thanksgiving_end": "2026-11-29",
+  "lab_weekdays": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "daily_lab_capacity_min": 240,
+  "weeks": [
+    {
+      "index": 0,
+      "start": "2026-11-09",
+      "end": "2026-11-15",
+      "title": "Approvals and ordering",
+      "exit_condition": "Biosafety determination signed, genes ordered with a delivery estimate in hand, reagents ordered."
+    },
+    {
+      "index": 1,
+      "start": "2026-11-16",
+      "end": "2026-11-22",
+      "title": "Transformation and stocks",
+      "exit_condition": "Glycerol stocks frozen and labelled for at least wild type and R100K."
+    },
+    {
+      "index": 2,
+      "start": "2026-11-23",
+      "end": "2026-11-29",
+      "title": "Thanksgiving, low intensity",
+      "exit_condition": "Buffers and metal stocks ready, quantification method tested, and ideally one confirmed induced band."
+    },
+    {
+      "index": 3,
+      "start": "2026-11-30",
+      "end": "2026-12-06",
+      "title": "Expression, lysis, purification",
+      "exit_condition": "Purified wild type and R100K in hand, with a gel image proving it."
+    },
+    {
+      "index": 4,
+      "start": "2026-12-07",
+      "end": "2026-12-13",
+      "title": "Assay, quantification, write-up",
+      "exit_condition": "A quantified result, a figure, and a written interpretation ready to hand in the week of Dec 14."
+    }
+  ],
+  "tasks": [
+    {
+      "id": "w0-spec",
+      "week": 0,
+      "scheduled_date": "2026-11-09",
+      "title": "Write one-page construct specification",
+      "detail": "Host strain, vector backbone, promoter, tag, resistance marker, and the three inserts.",
+      "duration_min": 90,
+      "location": "anywhere",
+      "blocked_by": [],
+      "status": "pending",
+      "completed_date": null,
+      "notes": "",
+      "critical": false,
+      "why": "",
+      "lag_days": 0,
+      "active": true
+    },
+    {
+      "id": "w0-rdna-note",
+      "week": 0,
+      "scheduled_date": "2026-11-09",
+      "title": "Note K-12 host, frame BSL-1 rDNA vs BSL-2",
+      "detail": "Record that the host is a laboratory K-12 derivative and the work is recombinant DNA, so the question put to review is BSL-1 rDNA versus BSL-2.",
+      "duration_min": 30,
+      "location": "anywhere",
+      "blocked_by": [],
+      "status": "pending",
+      "completed_date": null,
+      "notes": "",
+      "critical": false,
+      "why": "",
+      "lag_days": 0,
+      "active": true
+    },
+    {
+      "id": "w0-containment",
+      "week": 0,
+      "scheduled_date": "2026-11-09",
+      "title": "Draft containment and decontamination section",
+      "detail": "List segregation of transformed and untransformed cultures.",
+      "duration_min": 60,
+      "location": "anywhere",
+      "blocked_by": [],
+      "status": "pending",
+      "completed_date": null,
+      "notes": "",
+      "critical": false,
+      "why": "",
+      "lag_days": 0,
+      "active": true
+    },
+    {
+      "id": "w0-supervisor",
+      "week": 0,
+      "scheduled_date": "2026-11-10",
+      "title": "Meet supervisor, request written determination",
+      "detail": "Present the construct specification and ask for a written biosafety level determination. Confirm which approval forms the fair requires and who signs them. Confirm the school holds a lab at the determined level and that supervision is available on the days the procedure needs it. Agree the date by which approval will be signed.",
+      "duration_min": 60,
+      "location": "anywhere",
+      "blocked_by": [
+        "w0-spec"
+      ],
+      "status": "pending",
+      "completed_date": null,
+      "notes": "",
+      "critical": false,
+      "why": "",
+      "lag_days": 0,
+      "active": true
+    },
+    {
+      "id": "w0-order-genes",
+      "week": 0,
+      "scheduled_date": "2026-11-10",
+      "title": "Order three genes, cloned into expression vector",
+      "detail": "Order three genes each cloned into an expression vector, not as linear fragments. T7/lac promoter, N-terminal His-tag, resistance marker.",
+      "duration_min": 60,
+      "location": "anywhere",
+      "blocked_by": [
+        "w0-supervisor"
+      ],
+      "status": "pending",
+      "completed_date": null,
+      "notes": "",
+      "critical": true,
+      "why": "Gene synthesis is the one step that cannot be repeated inside the window.",
+      "lag_days": 0,
+      "active": true
+    },
+    {
+      "id": "w0-price-tiers",
+      "week": 0,
+      "scheduled_date": "2026-11-10",
+      "title": "Price express against standard tier",
+      "detail": "Price the express synthesis tier against the standard tier and record both delivery estimates.",
+      "duration_min": 20,
+      "location": "anywhere",
+      "blocked_by": [],
+      "status": "pending",
+      "completed_date": null,
+      "notes": "",
+      "critical": false,
+      "why": "",
+      "lag_days": 0,
+      "active": true
+    },
+    {
+      "id": "w0-shipping",
+      "week": 0,
+      "scheduled_date": "2026-11-11",
+      "title": "Confirm shipping to school address",
+      "detail": "Confirm the supplier will ship to the school address, and whether an institutional account is required.",
+      "duration_min": 20,
+      "location": "anywhere",
+      "blocked_by": [],
+      "status": "pending",
+      "completed_date": null,
+      "notes": "",
+      "critical": false,
+      "why": "",
+      "lag_days": 0,
+      "active": true
+    },
+    {
+      "id": "w0-order-reagents",
+      "week": 0,
+      "scheduled_date": "2026-11-11",
+      "title": "Place the full reagent order",
+      "detail": "Competent cells, LB broth and agar, antibiotic, IPTG, lysozyme, Ni-NTA columns and buffers, NdCl3, CaCl2, native PAGE gels and buffer, stain, ladder, consumables.",
+      "duration_min": 60,
+      "location": "anywhere",
+      "blocked_by": [
+        "w0-supervisor"
+      ],
+      "status": "pending",
+      "completed_date": null,
+      "notes": "",
+      "critical": false,
+      "why": "",
+      "lag_days": 0,
+      "active": true
+    },
+    {
+      "id": "w0-protocol",
+      "week": 0,
+      "scheduled_date": "2026-11-12",
+      "title": "Revise protocol to Phase 1 scope and submit",
+      "detail": "Revise the protocol document to the Phase 1 scope and submit it alongside the approval forms.",
+      "duration_min": 120,
+      "location": "anywhere",
+      "blocked_by": [],
+      "status": "pending",
+      "completed_date": null,
+      "notes": "",
+      "critical": false,
+      "why": "",
+      "lag_days": 0,
+      "active": true
+    },
+    {
+      "id": "w0-book-lab",
+      "week": 0,
+      "scheduled_date": "2026-11-13",
+      "title": "Book lab access and supervisor for weeks 1, 3, 4",
+      "detail": "Book lab access and supervisor availability for weeks 1, 3 and 4.",
+      "duration_min": 30,
+      "location": "anywhere",
+      "blocked_by": [],
+      "status": "pending",
+      "completed_date": null,
+      "notes": "",
+      "critical": false,
+      "why": "",
+      "lag_days": 0,
+      "active": true
+    },
+    {
+      "id": "w0-freezer",
+      "week": 0,
+      "scheduled_date": "2026-11-13",
+      "title": "Confirm freezer availability and freezing method",
+      "detail": "Confirm freezer availability and which freezing method week 3 will use.",
+      "duration_min": 20,
+      "location": "anywhere",
+      "blocked_by": [],
+      "status": "pending",
+      "completed_date": null,
+      "notes": "",
+      "critical": false,
+      "why": "",
+      "lag_days": 0,
+      "active": true
+    },
+    {
+      "id": "w0-determination",
+      "week": 0,
+      "scheduled_date": "2026-11-14",
+      "title": "Signed biosafety determination in hand",
+      "detail": "The written determination, signed. Nothing is ordered until the biosafety classification is on paper.",
+      "duration_min": 15,
+      "location": "anywhere",
+      "blocked_by": [
+        "w0-supervisor"
+      ],
+      "status": "pending",
+      "completed_date": null,
+      "notes": "",
+      "critical": true,
+      "why": "This is the only annotation that can remove the December deliverable entirely.",
+      "lag_days": 0,
+      "active": true
+    },
+    {
+      "id": "w0-gel-plan",
+      "week": 0,
+      "scheduled_date": "2026-11-14",
+      "title": "Write the gel loading plan",
+      "detail": "Lanes, conditions, ladder position, and which lanes carry the controls.",
+      "duration_min": 60,
+      "location": "anywhere",
+      "blocked_by": [],
+      "status": "pending",
+      "completed_date": null,
+      "notes": "",
+      "critical": false,
+      "why": "",
+      "lag_days": 0,
+      "active": true
+    },
+    {
+      "id": "w1-dna-received",
+      "week": 1,
+      "scheduled_date": "2026-11-17",
+      "title": "DNA received",
+      "detail": "Placeholder date until the supplier's estimate is recorded (fork F2) and the actual arrival is logged (fork F4).",
+      "duration_min": 15,
+      "location": "anywhere",
+      "blocked_by": [
+        "w0-order-genes"
+      ],
+      "status": "pending",
+      "completed_date": null,
+      "notes": "",
+      "critical": true,
+      "why": "Gate at Nov 23 if DNA has not arrived.",
+      "lag_days": 4,
+      "active": true
+    },
+    {
+      "id": "w1-log-receipt",
+      "week": 1,
+      "scheduled_date": "2026-11-17",
+      "title": "Log receipt, check map and sequence, store at -20",
+      "detail": "Log receipt, check the construct map and sequence file against what was ordered, and store the DNA at -20 C.",
+      "duration_min": 30,
+      "location": "anywhere",
+      "blocked_by": [
+        "w1-dna-received"
+      ],
+      "status": "pending",
+      "completed_date": null,
+      "notes": "",
+      "critical": false,
+      "why": "",
+      "lag_days": 0,
+      "active": true
+    },
+    {
+      "id": "w1-confirm-super",
+      "week": 1,
+      "scheduled_date": "2026-11-17",
+      "title": "Confirm supervisor present for transformation",
+      "detail": "Confirm the supervisor is present for the transformation session.",
+      "duration_min": 15,
+      "location": "anywhere",
+      "blocked_by": [],
+      "status": "pending",
+      "completed_date": null,
+      "notes": "",
+      "critical": false,
+      "why": "",
+      "lag_days": 0,
+      "active": true
+    },
+    {
+      "id": "w1-transform",
+      "week": 1,
+      "scheduled_date": "2026-11-18",
+      "title": "Transformation session",
+      "detail": "Thaw chemically competent cells on ice and keep them on ice throughout. Add plasmid DNA to each aliquot; incubate on ice 30 minutes. Heat-shock at 42 C for 30 seconds, then return to ice for 5 minutes. Add recovery medium; shake at 37 C for 1 hour. Plate onto LB agar with the selection antibiotic, one plate per variant. Plate two controls: untransformed cells on antibiotic, which must show no growth, and untransformed cells on plain LB, which must grow. Incubate overnight at 37 C.",
+      "duration_min": 180,
+      "location": "lab",
+      "blocked_by": [
+        "w1-log-receipt"
+      ],
+      "status": "pending",
+      "completed_date": null,
+      "notes": "",
+      "critical": false,
+      "why": "",
+      "lag_days": 0,
+      "active": true
+    },
+    {
+      "id": "w1-read-plates",
+      "week": 1,
+      "scheduled_date": "2026-11-19",
+      "title": "Read plates, check the negative control",
+      "detail": "Colonies on the variant plates and none on the negative control plate means selection worked.",
+      "duration_min": 30,
+      "location": "lab",
+      "blocked_by": [
+        "w1-transform"
+      ],
+      "status": "pending",
+      "completed_date": null,
+      "notes": "",
+      "critical": false,
+      "why": "",
+      "lag_days": 1,
+      "active": true
+    },
+    {
+      "id": "w1-pick-colonies",
+      "week": 1,
+      "scheduled_date": "2026-11-19",
+      "title": "Pick two colonies per variant into liquid culture",
+      "detail": "Pick two well-separated colonies per variant into liquid culture with antibiotic; grow overnight with shaking at 37 C.",
+      "duration_min": 45,
+      "location": "lab",
+      "blocked_by": [
+        "w1-read-plates"
+      ],
+      "status": "pending",
+      "completed_date": null,
+      "notes": "",
+      "critical": false,
+      "why": "",
+      "lag_days": 0,
+      "active": true
+    },
+    {
+      "id": "w1-glycerol",
+      "week": 1,
+      "scheduled_date": "2026-11-20",
+      "title": "Make and freeze glycerol stocks",
+      "detail": "Make glycerol stocks from each overnight culture and freeze them.",
+      "duration_min": 60,
+      "location": "lab",
+      "blocked_by": [
+        "w1-pick-colonies"
+      ],
+      "status": "pending",
+      "completed_date": null,
+      "notes": "",
+      "critical": true,
+      "why": "This is the checkpoint that protects the rest of the schedule.",
+      "lag_days": 1,
+      "active": true
+    },
+    {
+      "id": "w1-autoclave",
+      "week": 1,
+      "scheduled_date": "2026-11-20",
+      "title": "Autoclave plates and spent culture",
+      "detail": "Autoclave all plates and spent culture before disposal.",
+      "duration_min": 30,
+      "location": "lab",
+      "blocked_by": [
+        "w1-read-plates"
+      ],
+      "status": "pending",
+      "completed_date": null,
+      "notes": "",
+      "critical": false,
+      "why": "",
+      "lag_days": 0,
+      "active": true
+    },
+    {
+      "id": "w1-retransform",
+      "week": 1,
+      "scheduled_date": "2026-11-20",
+      "title": "Repeat transformation",
+      "detail": "One repeat transformation fits in this week if no colonies appear. A second failure means the fallback decision moves forward to Nov 23.",
+      "duration_min": 180,
+      "location": "lab",
+      "blocked_by": [],
+      "status": "pending",
+      "completed_date": null,
+      "notes": "",
+      "critical": false,
+      "why": "",
+      "lag_days": 0,
+      "active": false
+    },
+    {
+      "id": "w2-test-expr",
+      "week": 2,
+      "scheduled_date": "2026-11-23",
+      "title": "Small-scale test expression",
+      "detail": "One culture per variant, induce with IPTG, take samples before induction and after 3 hours at 37 C.",
+      "duration_min": 240,
+      "location": "lab",
+      "blocked_by": [
+        "w1-glycerol"
+      ],
+      "status": "pending",
+      "completed_date": null,
+      "notes": "",
+      "critical": false,
+      "why": "",
+      "lag_days": 0,
+      "active": false
+    },
+    {
+      "id": "w2-test-gel",
+      "week": 2,
+      "scheduled_date": "2026-11-24",
+      "title": "Denaturing gel on test expression samples",
+      "detail": "Run those samples on a denaturing gel to confirm a band appears at the expected size.",
+      "duration_min": 180,
+      "location": "lab",
+      "blocked_by": [
+        "w2-test-expr"
+      ],
+      "status": "pending",
+      "completed_date": null,
+      "notes": "",
+      "critical": false,
+      "why": "",
+      "lag_days": 0,
+      "active": false
+    },
+    {
+      "id": "w2-record",
+      "week": 2,
+      "scheduled_date": "2026-11-24",
+      "title": "Record the test expression result",
+      "detail": "A visible induced band here removes most of the risk from week 3.",
+      "duration_min": 20,
+      "location": "anywhere",
+      "blocked_by": [
+        "w2-test-gel"
+      ],
+      "status": "pending",
+      "completed_date": null,
+      "notes": "",
+      "critical": false,
+      "why": "",
+      "lag_days": 0,
+      "active": false
+    },
+    {
+      "id": "w2-buffers",
+      "week": 2,
+      "scheduled_date": "2026-11-23",
+      "title": "Prepare and label the five buffers",
+      "detail": "Lysis, binding, wash, elution, native running buffer. Stable at room temperature or 4 C.",
+      "duration_min": 120,
+      "location": "anywhere",
+      "blocked_by": [],
+      "status": "pending",
+      "completed_date": null,
+      "notes": "",
+      "critical": false,
+      "why": "",
+      "lag_days": 0,
+      "active": true
+    },
+    {
+      "id": "w2-metal-stocks",
+      "week": 2,
+      "scheduled_date": "2026-11-24",
+      "title": "Prepare Nd3+ and Ca2+ stock solutions",
+      "detail": "Prepare the Nd3+ and Ca2+ stock solutions, with goggles on, and label concentrations clearly.",
+      "duration_min": 60,
+      "location": "anywhere",
+      "blocked_by": [],
+      "status": "pending",
+      "completed_date": null,
+      "notes": "",
+      "critical": false,
+      "why": "",
+      "lag_days": 0,
+      "active": true
+    },
+    {
+      "id": "w2-imagej",
+      "week": 2,
+      "scheduled_date": "2026-11-25",
+      "title": "Write and test the ImageJ quantification procedure",
+      "detail": "Write the ImageJ quantification procedure and test it on a practice gel image so the method is settled before real data exists.",
+      "duration_min": 120,
+      "location": "anywhere",
+      "blocked_by": [],
+      "status": "pending",
+      "completed_date": null,
+      "notes": "",
+      "critical": false,
+      "why": "",
+      "lag_days": 0,
+      "active": true
+    },
+    {
+      "id": "w2-draft",
+      "week": 2,
+      "scheduled_date": "2026-11-27",
+      "title": "Draft results and methods, figures blank",
+      "detail": "Draft the results and methods sections of the write-up with the figures left blank.",
+      "duration_min": 180,
+      "location": "anywhere",
+      "blocked_by": [],
+      "status": "pending",
+      "completed_date": null,
+      "notes": "",
+      "critical": false,
+      "why": "",
+      "lag_days": 0,
+      "active": true
+    },
+    {
+      "id": "w2-phase2",
+      "week": 2,
+      "scheduled_date": "2026-11-28",
+      "title": "Prepare the Phase 2 outline",
+      "detail": "Prepare the Phase 2 outline so it is ready regardless of how Phase 1 lands.",
+      "duration_min": 120,
+      "location": "anywhere",
+      "blocked_by": [],
+      "status": "pending",
+      "completed_date": null,
+      "notes": "",
+      "critical": false,
+      "why": "",
+      "lag_days": 0,
+      "active": true
+    },
+    {
+      "id": "w3-overnight",
+      "week": 3,
+      "scheduled_date": "2026-11-30",
+      "title": "Inoculate overnight cultures from glycerol stocks",
+      "detail": "Inoculate from glycerol stocks into LB with antibiotic; grow overnight with shaking at 37 C.",
+      "duration_min": 45,
+      "location": "lab",
+      "blocked_by": [
+        "w1-glycerol"
+      ],
+      "status": "pending",
+      "completed_date": null,
+      "notes": "",
+      "critical": false,
+      "why": "",
+      "lag_days": 0,
+      "active": true
+    },
+    {
+      "id": "w3-expression",
+      "week": 3,
+      "scheduled_date": "2026-12-01",
+      "title": "Grow to mid-log, induce, harvest, freeze pellets",
+      "detail": "Dilute each overnight culture into fresh LB with antibiotic and grow at 37 C to mid-log density. Take a 1 mL pre-induction sample from each and keep it for the gel. Add IPTG to induce; continue shaking at 37 C for 3 hours. Take a post-induction sample from each. Harvest cells by centrifugation; discard the supernatant into disinfectant; freeze the pellets.",
+      "duration_min": 300,
+      "location": "lab",
+      "blocked_by": [
+        "w3-overnight"
+      ],
+      "status": "pending",
+      "completed_date": null,
+      "notes": "",
+      "critical": false,
+      "why": "",
+      "lag_days": 1,
+      "active": true
+    },
+    {
+      "id": "w3-lysis",
+      "week": 3,
+      "scheduled_date": "2026-12-02",
+      "title": "Lysozyme pre-incubation and three freeze-thaw cycles",
+      "detail": "Resuspend each pellet in lysis buffer containing lysozyme. Incubate on ice 30 minutes to weaken the cell walls before the first freeze. Freeze: -80 C for 15 minutes per cycle preferred; dry ice and ethanol for about 5 minutes is an equivalent fast freeze; -20 C works but needs at least 1 hour per cycle. Thaw in a 37 C water bath until just liquid. Three cycles total. Centrifuge and keep the supernatant. Keep a small sample of the pellet for the gel, so an insoluble result is diagnosable rather than invisible.",
+      "duration_min": 240,
+      "location": "lab",
+      "blocked_by": [
+        "w3-expression"
+      ],
+      "status": "pending",
+      "completed_date": null,
+      "notes": "",
+      "critical": false,
+      "why": "",
+      "lag_days": 0,
+      "active": true
+    },
+    {
+      "id": "w3-nickel",
+      "week": 3,
+      "scheduled_date": "2026-12-03",
+      "title": "Ni-NTA purification, keep every fraction",
+      "detail": "Equilibrate the Ni-NTA column with binding buffer. Load the supernatant and collect the flow-through. Wash and collect the wash. Elute in small fractions, collecting each separately. Keep every fraction: if the elution is empty, the flow-through and wash tell you where the protein went.",
+      "duration_min": 180,
+      "location": "lab",
+      "blocked_by": [
+        "w3-lysis"
+      ],
+      "status": "pending",
+      "completed_date": null,
+      "notes": "",
+      "critical": false,
+      "why": "",
+      "lag_days": 0,
+      "active": true
+    },
+    {
+      "id": "w3-confirm-gel",
+      "week": 3,
+      "scheduled_date": "2026-12-04",
+      "title": "Denaturing gel, confirm enriched elution band",
+      "detail": "Run a denaturing gel with pre-induction, post-induction, soluble lysate, insoluble pellet, flow-through, wash, and elution fractions. Stain, image, and confirm a band at the expected size that is enriched in the elution lanes.",
+      "duration_min": 240,
+      "location": "lab",
+      "blocked_by": [
+        "w3-nickel"
+      ],
+      "status": "pending",
+      "completed_date": null,
+      "notes": "",
+      "critical": true,
+      "why": "Without this, week 4 has nothing to assay - this is the second gate.",
+      "lag_days": 0,
+      "active": true
+    },
+    {
+      "id": "w3-conc",
+      "week": 3,
+      "scheduled_date": "2026-12-04",
+      "title": "Estimate concentration, buffer-exchange if needed",
+      "detail": "Estimate concentration, and buffer-exchange or dilute into the assay buffer if the elution buffer would interfere with the native gel.",
+      "duration_min": 60,
+      "location": "lab",
+      "blocked_by": [
+        "w3-confirm-gel"
+      ],
+      "status": "pending",
+      "completed_date": null,
+      "notes": "",
+      "critical": false,
+      "why": "",
+      "lag_days": 0,
+      "active": true
+    },
+    {
+      "id": "w4-assay-1",
+      "week": 4,
+      "scheduled_date": "2026-12-07",
+      "title": "First assay run, six samples",
+      "detail": "Two variants x three conditions: protein only, protein with Nd3+, protein with Nd3+ plus a large Ca2+ excess. Keep protein concentration identical across all six - differences in loading look exactly like differences in dimerization. Incubate 30 minutes at room temperature. Load onto a native, non-denaturing gel alongside a native ladder; record the lane order before running. Run cold or in short bursts if the rig warms. Stain with Coomassie, destain, and image on a flat, evenly lit background.",
+      "duration_min": 300,
+      "location": "lab",
+      "blocked_by": [
+        "w3-confirm-gel"
+      ],
+      "status": "pending",
+      "completed_date": null,
+      "notes": "",
+      "critical": false,
+      "why": "",
+      "lag_days": 0,
+      "active": true
+    },
+    {
+      "id": "w4-assay-23",
+      "week": 4,
+      "scheduled_date": "2026-12-08",
+      "title": "Replicate runs two and three",
+      "detail": "Repeat the full six-sample layout twice more from the same purified protein. Image each gel under identical conditions so band intensities are comparable.",
+      "duration_min": 360,
+      "location": "lab",
+      "blocked_by": [
+        "w4-assay-1"
+      ],
+      "status": "pending",
+      "completed_date": null,
+      "notes": "",
+      "critical": false,
+      "why": "",
+      "lag_days": 0,
+      "active": true
+    },
+    {
+      "id": "w4-quant",
+      "week": 4,
+      "scheduled_date": "2026-12-09",
+      "title": "ImageJ quantification, tabulate replicates",
+      "detail": "Measure monomer and dimer band intensity per lane in ImageJ, subtracting local background. Compute the dimerization metric. Tabulate all replicates; do not average away a replicate that disagrees.",
+      "duration_min": 240,
+      "location": "anywhere",
+      "blocked_by": [
+        "w4-assay-23"
+      ],
+      "status": "pending",
+      "completed_date": null,
+      "notes": "",
+      "critical": false,
+      "why": "",
+      "lag_days": 0,
+      "active": true
+    },
+    {
+      "id": "w4-spare",
+      "week": 4,
+      "scheduled_date": "2026-12-10",
+      "title": "Spare day: repeat run or R100A assay",
+      "detail": "Held for a repeat run if a gel failed, or for an R100A assay if that variant purified successfully.",
+      "duration_min": 300,
+      "location": "lab",
+      "blocked_by": [],
+      "status": "pending",
+      "completed_date": null,
+      "notes": "",
+      "critical": false,
+      "why": "",
+      "lag_days": 0,
+      "active": true
+    },
+    {
+      "id": "w4-figure",
+      "week": 4,
+      "scheduled_date": "2026-12-11",
+      "title": "Produce the dimerization figure",
+      "detail": "Dimerization fraction by variant and condition, with individual replicate points shown.",
+      "duration_min": 180,
+      "location": "anywhere",
+      "blocked_by": [
+        "w4-quant"
+      ],
+      "status": "pending",
+      "completed_date": null,
+      "notes": "",
+      "critical": false,
+      "why": "",
+      "lag_days": 0,
+      "active": true
+    },
+    {
+      "id": "w4-writeup",
+      "week": 4,
+      "scheduled_date": "2026-12-11",
+      "title": "Write results and interpretation",
+      "detail": "State plainly what two technical replicates can and cannot support.",
+      "duration_min": 240,
+      "location": "anywhere",
+      "blocked_by": [
+        "w4-quant"
+      ],
+      "status": "pending",
+      "completed_date": null,
+      "notes": "",
+      "critical": false,
+      "why": "",
+      "lag_days": 0,
+      "active": true
+    },
+    {
+      "id": "w4-attach",
+      "week": 4,
+      "scheduled_date": "2026-12-12",
+      "title": "Attach Phase 2 plan and biosafety documentation",
+      "detail": "Attach the Phase 2 plan and the biosafety documentation.",
+      "duration_min": 60,
+      "location": "anywhere",
+      "blocked_by": [
+        "w4-writeup"
+      ],
+      "status": "pending",
+      "completed_date": null,
+      "notes": "",
+      "critical": false,
+      "why": "",
+      "lag_days": 0,
+      "active": true
+    }
+  ],
+  "gates": [
+    {
+      "id": "g0-biosafety",
+      "date": "2026-11-14",
+      "question": "Is the biosafety determination signed, and is it BSL-1?",
+      "on_fail": "BSL-2 means a BSL-2 facility with a qualified scientist, which is not achievable by December 14. Phase 1 becomes the computational fallback.",
+      "requires": [
+        "w0-determination",
+        "w0-order-genes",
+        "w0-order-reagents"
+      ]
+    },
+    {
+      "id": "g1-dna",
+      "date": "2026-11-23",
+      "question": "Has the DNA arrived, and are glycerol stocks frozen for wild type and R100K?",
+      "on_fail": "Move to the fallback decision. Gene synthesis cannot be repeated inside the window.",
+      "requires": [
+        "w1-dna-received",
+        "w1-glycerol"
+      ]
+    },
+    {
+      "id": "g2-protein",
+      "date": "2026-12-06",
+      "question": "Is purified wild type and R100K in hand, with a gel image proving it?",
+      "on_fail": "Week 4 has nothing to assay. Fall back to the written interpretation of whatever gels exist, plus the Phase 2 plan.",
+      "requires": [
+        "w3-confirm-gel"
+      ]
+    }
+  ],
+  "forks": [
+    {
+      "id": "F1",
+      "ask_date": "2026-11-10",
+      "reask_until": "2026-11-14",
+      "question": "What did the supervisor determine?",
+      "options": [
+        {
+          "key": "bsl1",
+          "label": "BSL-1 - may proceed in the school lab",
+          "effects": {
+            "note": "Determination: BSL-1. In-school pathway stands."
+          }
+        },
+        {
+          "key": "bsl2",
+          "label": "BSL-2 - not achievable by Dec 14",
+          "effects": {
+            "flag": {
+              "fallback_active": true
+            },
+            "note": "Determination: BSL-2. Phase 1 becomes the computational fallback."
+          }
+        },
+        {
+          "key": "not_yet",
+          "label": "Not yet determined",
+          "defer": true,
+          "effects": {}
+        }
+      ],
+      "answered_on": null,
+      "answer": null
+    },
+    {
+      "id": "F2",
+      "ask_date": "2026-11-11",
+      "reask_until": "2026-11-16",
+      "question": "Which synthesis tier did you order, and what delivery date did the supplier give?",
+      "prompt_date": true,
+      "date_label": "Supplier's delivery estimate",
+      "options": [
+        {
+          "key": "express",
+          "label": "Express (nearer 4 business days plus shipping)",
+          "effects": {
+            "set_date": {
+              "w1-dna-received": "from_answer"
+            },
+            "note": "Express synthesis tier ordered."
+          }
+        },
+        {
+          "key": "standard",
+          "label": "Standard (about 10 business days plus shipping)",
+          "effects": {
+            "set_date": {
+              "w1-dna-received": "from_answer"
+            },
+            "note": "Standard synthesis tier ordered."
+          }
+        },
+        {
+          "key": "not_yet",
+          "label": "Not ordered yet",
+          "defer": true,
+          "effects": {}
+        }
+      ],
+      "answered_on": null,
+      "answer": null
+    },
+    {
+      "id": "F3",
+      "ask_date": "2026-11-13",
+      "reask_until": "2026-12-01",
+      "question": "Which freezing method will week 3 use?",
+      "options": [
+        {
+          "key": "minus80",
+          "label": "-80 C freezer, 15 min per cycle",
+          "effects": {
+            "set_duration": {
+              "w3-lysis": 240
+            },
+            "note": "Lysis: -80 C, 15 min per cycle."
+          }
+        },
+        {
+          "key": "dryice",
+          "label": "Dry ice and ethanol bath, about 5 min",
+          "effects": {
+            "set_duration": {
+              "w3-lysis": 240
+            },
+            "note": "Lysis: dry ice and ethanol, equivalent fast freeze."
+          }
+        },
+        {
+          "key": "minus20",
+          "label": "-20 C only, at least 1 hour per cycle",
+          "effects": {
+            "set_duration": {
+              "w3-lysis": 420
+            },
+            "note": "Lysis: -20 C fallback. At least 1 hour per cycle, three cycles. Lyses less completely; the lysozyme step partly compensates."
+          }
+        },
+        {
+          "key": "not_yet",
+          "label": "Not confirmed yet",
+          "defer": true,
+          "effects": {}
+        }
+      ],
+      "answered_on": null,
+      "answer": null
+    },
+    {
+      "id": "F4",
+      "ask_date": "2026-11-16",
+      "reask_until": "2026-11-30",
+      "question": "Did the DNA arrive today?",
+      "options": [
+        {
+          "key": "yes",
+          "label": "Yes, it arrived",
+          "effects": {
+            "complete": [
+              "w1-dna-received"
+            ],
+            "set_date": {
+              "w1-transform": "next_lab_day"
+            },
+            "note": "DNA received."
+          }
+        },
+        {
+          "key": "no",
+          "label": "Not yet",
+          "defer": true,
+          "effects": {}
+        }
+      ],
+      "answered_on": null,
+      "answer": null
+    },
+    {
+      "id": "F5",
+      "ask_date": "2026-11-19",
+      "reask_until": "2026-11-23",
+      "question": "Colonies on the variant plates, and a clean negative control?",
+      "options": [
+        {
+          "key": "good",
+          "label": "Colonies present, negative control clean",
+          "effects": {
+            "note": "Selection worked."
+          }
+        },
+        {
+          "key": "none",
+          "label": "No colonies - use the repeat transformation",
+          "effects": {
+            "activate": [
+              "w1-retransform"
+            ],
+            "set_date": {
+              "w1-retransform": "next_lab_day"
+            },
+            "note": "No colonies. One repeat transformation fits in this week."
+          }
+        },
+        {
+          "key": "second_fail",
+          "label": "No colonies on the repeat either",
+          "effects": {
+            "flag": {
+              "gate_g1_early": true
+            },
+            "note": "Second transformation failure. The fallback decision moves forward to Nov 23."
+          }
+        },
+        {
+          "key": "not_yet",
+          "label": "Plates not read yet",
+          "defer": true,
+          "effects": {}
+        }
+      ],
+      "answered_on": null,
+      "answer": null
+    },
+    {
+      "id": "F6",
+      "ask_date": "2026-11-22",
+      "reask_until": "2026-11-23",
+      "question": "Do you have lab access on Nov 23-24?",
+      "options": [
+        {
+          "key": "yes",
+          "label": "Yes - run the small-scale test expression",
+          "effects": {
+            "activate": [
+              "w2-test-expr",
+              "w2-test-gel",
+              "w2-record"
+            ],
+            "note": "Lab access Nov 23-24. Test expression branch activated."
+          }
+        },
+        {
+          "key": "no",
+          "label": "No - preparation work only",
+          "effects": {
+            "note": "No lab access Nov 23-24. Preparation branch only."
+          }
+        },
+        {
+          "key": "not_yet",
+          "label": "Do not know yet",
+          "defer": true,
+          "effects": {}
+        }
+      ],
+      "answered_on": null,
+      "answer": null
+    },
+    {
+      "id": "F7",
+      "ask_date": "2026-11-24",
+      "reask_until": "2026-11-25",
+      "question": "Was there a visible induced band at the expected size?",
+      "options": [
+        {
+          "key": "yes",
+          "label": "Yes, band visible",
+          "effects": {
+            "note": "Induced band confirmed. Most of the week 3 risk is removed."
+          }
+        },
+        {
+          "key": "no",
+          "label": "No band visible",
+          "effects": {
+            "note": "No induced band in the test expression. Week 3 carries full expression risk."
+          }
+        },
+        {
+          "key": "not_run",
+          "label": "Test expression was not run",
+          "defer": true,
+          "effects": {}
+        }
+      ],
+      "answered_on": null,
+      "answer": null
+    },
+    {
+      "id": "F8",
+      "ask_date": "2026-12-04",
+      "reask_until": "2026-12-06",
+      "question": "Is there a band at the expected size, enriched in the elution lanes?",
+      "options": [
+        {
+          "key": "yes",
+          "label": "Yes - purified protein confirmed",
+          "effects": {
+            "note": "Purified protein confirmed on gel."
+          }
+        },
+        {
+          "key": "no",
+          "label": "No - elution empty or no enrichment",
+          "effects": {
+            "flag": {
+              "purification_failed": true
+            },
+            "note": "No enriched elution band. Check the flow-through and wash to find where the protein went."
+          }
+        },
+        {
+          "key": "not_yet",
+          "label": "Gel not run yet",
+          "defer": true,
+          "effects": {}
+        }
+      ],
+      "answered_on": null,
+      "answer": null
+    },
+    {
+      "id": "F9",
+      "ask_date": "2026-12-04",
+      "reask_until": "2026-12-09",
+      "question": "Did R100A purify successfully?",
+      "options": [
+        {
+          "key": "yes",
+          "label": "Yes - R100A is available to assay",
+          "effects": {
+            "flag": {
+              "r100a_available": true
+            },
+            "note": "R100A purified. Eligible for the spare day."
+          }
+        },
+        {
+          "key": "no",
+          "label": "No - two variants only",
+          "effects": {
+            "note": "R100A not available. Spare day held for a repeat run."
+          }
+        },
+        {
+          "key": "not_yet",
+          "label": "Not known yet",
+          "defer": true,
+          "effects": {}
+        }
+      ],
+      "answered_on": null,
+      "answer": null
+    },
+    {
+      "id": "F10",
+      "ask_date": "2026-12-09",
+      "reask_until": "2026-12-10",
+      "question": "Did any gel fail? The spare day goes to a repeat before R100A.",
+      "options": [
+        {
+          "key": "repeat",
+          "label": "Yes - use the spare day for a repeat run",
+          "effects": {
+            "note": "Spare day assigned to a repeat run."
+          }
+        },
+        {
+          "key": "r100a",
+          "label": "No - use the spare day for the R100A assay",
+          "effects": {
+            "note": "Spare day assigned to the R100A assay."
+          }
+        },
+        {
+          "key": "free",
+          "label": "No - spare day not needed",
+          "effects": {
+            "drop": [
+              "w4-spare"
+            ],
+            "note": "Spare day not needed."
+          }
+        },
+        {
+          "key": "not_yet",
+          "label": "Not known yet",
+          "defer": true,
+          "effects": {}
+        }
+      ],
+      "answered_on": null,
+      "answer": null
+    }
+  ],
+  "state": {
+    "flags": {},
+    "notes": []
+  }
+}
