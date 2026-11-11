@@ -57,7 +57,10 @@ def ds(d):
 
 
 def human(d):
-    return d.strftime("%a %b %-d") if hasattr(d, "strftime") else str(d)
+    # no %-d: that directive is glibc-only and raises ValueError on Windows
+    if hasattr(d, "strftime"):
+        return f"{d.strftime('%a %b')} {d.day}"
+    return str(d)
 
 
 def plural(n, word):
@@ -679,7 +682,8 @@ def normalize(plan):
 
 
 def load_plan():
-    with open(PLAN_PATH, "r", encoding="utf-8") as fh:
+    # utf-8-sig: tolerate the BOM some Windows editors add when you save
+    with open(PLAN_PATH, "r", encoding="utf-8-sig") as fh:
         return normalize(json.load(fh))
 
 
@@ -694,7 +698,7 @@ def save_plan(plan):
 def load_log():
     if not os.path.exists(LOG_PATH):
         return {"entries": []}
-    with open(LOG_PATH, "r", encoding="utf-8") as fh:
+    with open(LOG_PATH, "r", encoding="utf-8-sig") as fh:
         data = json.load(fh)
     if not isinstance(data, dict) or not isinstance(data.get("entries"), list):
         return {"entries": []}
